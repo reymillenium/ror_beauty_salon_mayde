@@ -102,9 +102,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a class="active" href="<%= index_path %>">Home</a></li>
-            <li><a href="<%= about_path %>">About</a></li>
-            <li><a href="<%= services_path %>">Services</a></li>
+            <li>
+              <a class="<%= current_page?(:controller => 'pages', :action => 'index') ? 'active' : '' %>" href="<%= index_path %>">Home</a>
+            </li>
+            <li><a class="<%= current_page?(:controller => 'pages', :action => 'about') ? 'active' : '' %>" href="<%= about_path %>">About</a></li>
+            <li><a class="<%= current_page?(:controller => 'pages', :action => 'services') ? 'active' : '' %>" href="<%= services_path %>">Services</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Pages<b class="caret"></b></a>
               <ul class="dropdown-menu agile_short_dropdown">
@@ -112,8 +114,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="#">Typography</a></li>
               </ul>
             </li>
-            <li><a href="<%= gallery_path %>">Gallery</a></li>
-            <li><a href="<%= contact_path %>">Contact</a></li>
+            <li><a class="<%= current_page?(:controller => 'pages', :action => 'gallery') ? 'active' : '' %>" href="<%= gallery_path %>">Gallery</a></li>
+            <li><a class="<%= current_page?(:controller => 'pages', :action => 'contact') ? 'active' : '' %>" href="<%= contact_path %>">Contact</a></li>
           </ul>
 
         </div>

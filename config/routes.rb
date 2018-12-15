@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # Changing the default main page to the posts' index view
-  get '/', to: 'pages#index'
+  # get '/', to: 'pages#index'
   # root 'pages#index'
   #
   get 'about', to: 'pages#about'
