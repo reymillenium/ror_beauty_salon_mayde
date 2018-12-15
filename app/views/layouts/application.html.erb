@@ -105,8 +105,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li>
               <a class="<%= current_page?(:controller => 'pages', :action => 'index') ? 'active' : '' %>" href="<%= index_path %>">Home</a>
             </li>
-            <li><a class="<%= current_page?(:controller => 'pages', :action => 'about') ? 'active' : '' %>" href="<%= about_path %>">About</a></li>
-            <li><a class="<%= current_page?(:controller => 'pages', :action => 'services') ? 'active' : '' %>" href="<%= services_path %>">Services</a></li>
+            <li>
+              <a class="<%= current_page?(:controller => 'pages', :action => 'about') ? 'active' : '' %>" href="<%= about_path %>">About</a>
+            </li>
+            <li>
+              <a class="<%= current_page?(:controller => 'pages', :action => 'services') ? 'active' : '' %>" href="<%= services_path %>">Services</a>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Pages<b class="caret"></b></a>
               <ul class="dropdown-menu agile_short_dropdown">
@@ -114,8 +118,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="#">Typography</a></li>
               </ul>
             </li>
-            <li><a class="<%= current_page?(:controller => 'pages', :action => 'gallery') ? 'active' : '' %>" href="<%= gallery_path %>">Gallery</a></li>
-            <li><a class="<%= current_page?(:controller => 'pages', :action => 'contact') ? 'active' : '' %>" href="<%= contact_path %>">Contact</a></li>
+            <li>
+              <a class="<%= current_page?(:controller => 'pages', :action => 'gallery') ? 'active' : '' %>" href="<%= gallery_path %>">Gallery</a>
+            </li>
+            <li>
+              <a class="<%= current_page?(:controller => 'pages', :action => 'contact') ? 'active' : '' %>" href="<%= contact_path %>">Contact</a>
+            </li>
           </ul>
 
         </div>
@@ -127,55 +135,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!-- //navigation -->
 
   <!-- Renders only if is the index view  -->
-  <% current_page?(:controller => 'pages', :action => 'index') do %>
-    <!-- Only in the index view -->
-    <div class="container">
-      <!-- header -->
-      <!-- //header -->
-      <div class="agileits_w3layouts_banner_info">
-        <section class="slider">
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-                <div class="banner-text-w3-agileits">
-                  <h5>Experienced hair stylists </h5>
-                  <h2>Enjoy Professional Beauty Services!</h2>
-                  <p>Providing expert skin care advice & beauty services using natural products to cater for any
-                    skin.</p>
-                  <div class="botton">
-                    <a href="#">Contact Now</a>
-                  </div>
+  <!-- Only in the index view -->
+  <div class="container" style="<%= !current_page?(index_path) ? 'display: none' : '' %>" >
+    <!-- header -->
+    <!-- //header -->
+    <div class="agileits_w3layouts_banner_info">
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <div class="banner-text-w3-agileits">
+                <h5>Experienced hair stylists </h5>
+                <h2>Enjoy Professional Beauty Services!</h2>
+                <p>Providing expert skin care advice & beauty services using natural products to cater for any
+                  skin.</p>
+                <div class="botton">
+                  <a href="#">Contact Now</a>
                 </div>
-              </li>
-              <li>
-                <div class="banner-text-w3-agileits">
-                  <h5>The best and fastest service</h5>
-                  <h2>Are You Planning to Pamper Yourself?</h2>
-                  <p>Providing expert skin care advice & beauty services using natural products to cater for any
-                    skin.</p>
-                  <div class="botton">
-                    <a href="#">Contact Now</a>
-                  </div>
+              </div>
+            </li>
+            <li>
+              <div class="banner-text-w3-agileits">
+                <h5>The best and fastest service</h5>
+                <h2>Are You Planning to Pamper Yourself?</h2>
+                <p>Providing expert skin care advice & beauty services using natural products to cater for any
+                  skin.</p>
+                <div class="botton">
+                  <a href="#">Contact Now</a>
                 </div>
-              </li>
-              <li>
-                <div class="banner-text-w3-agileits">
-                  <h5>Experienced hair stylists </h5>
-                  <h2>Enjoy Professional Beauty Services!</h2>
-                  <p>Providing expert skin care advice & beauty services using natural products to cater for any
-                    skin.</p>
-                  <div class="botton">
-                    <a href="#">Contact Now</a>
-                  </div>
+              </div>
+            </li>
+            <li>
+              <div class="banner-text-w3-agileits">
+                <h5>Experienced hair stylists </h5>
+                <h2>Enjoy Professional Beauty Services!</h2>
+                <p>Providing expert skin care advice & beauty services using natural products to cater for any
+                  skin.</p>
+                <div class="botton">
+                  <a href="#">Contact Now</a>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
-    <!-- / Only in the index view -->
-  <% end %>
+  </div>
+  <!-- / Only in the index view -->
 
 
 </div>
