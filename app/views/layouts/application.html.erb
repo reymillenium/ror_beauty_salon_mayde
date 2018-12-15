@@ -102,9 +102,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a class="active" href="<%= index_path %>">Home</a></li>
+            <li><a href="<%= about_path %>">About</a></li>
+            <li><a href="<%= services_path %>">Services</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Pages<b class="caret"></b></a>
               <ul class="dropdown-menu agile_short_dropdown">
@@ -112,8 +112,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="#">Typography</a></li>
               </ul>
             </li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="<%= gallery_path %>">Gallery</a></li>
+            <li><a href="<%= contact_path %>">Contact</a></li>
           </ul>
 
         </div>
@@ -125,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!-- //navigation -->
 
   <!-- Renders only if is the index view  -->
-  <%= current_page?(:controller => 'pages', :action => 'index') do %>
+  <% current_page?(:controller => 'pages', :action => 'index') do %>
     <!-- Only in the index view -->
     <div class="container">
       <!-- header -->
@@ -173,7 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
     </div>
     <!-- / Only in the index view -->
-  <% end %> %>
+  <% end %>
 
 
 </div>
@@ -271,7 +271,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <a href="#home" class="scroll" id="toTop" style="display: block;">
   <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
-<!--<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>-->
 <%= javascript_include_tag 'jquery-2.2.3.min.js' %>
 
 <!-- start-smoth-scrolling -->
