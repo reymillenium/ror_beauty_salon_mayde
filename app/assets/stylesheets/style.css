@@ -983,7 +983,7 @@ ul.con_inner_text li label {
     font-weight: 400!important;
 }
 
-ul.con_inner_text.midimg li {
+ul.con_inner_text.midi li {
     display: inline-block;
     float: left;
     width: 22%;
@@ -3390,12 +3390,12 @@ p.copyright {
 
 
 
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+/*.img-responsive,*/
+/*.thumbnail > img,*/
+/*.thumbnail a > img,*/
+/*.carousel-inner > .item > img,*/
+/*.carousel-inner > .item > a > img {*/
+    /*display: block;*/
+    /*max-width: 100%;*/
+    /*height: auto;*/
+/*}*/
