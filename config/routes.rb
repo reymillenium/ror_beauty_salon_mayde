@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # The about view (extra)
+  # get 'about', to: 'about#show'
+  get 'pages', to: 'pages#index'
+
+
 end
