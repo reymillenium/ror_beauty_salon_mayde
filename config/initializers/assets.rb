@@ -58,6 +58,6 @@ Rails.application.config.assets.precompile += %w( style.css )
 
 
 Rails.application.config.assets.precompile += %w( font-awesome-4.7.0/css/font-awesome.css )
-
+Rails.application.config.assets.precompile += %w( app.js )
 #
 
