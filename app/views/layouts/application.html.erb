@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
+
   <title>Salón Havana</title>
 
-  <%#= csrf_meta_tags %>
-  <%#= csp_meta_tag %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
 
   <!--   Meta Tags-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="keywords" content="Beauty Salon Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design"/>
+  <meta name="keywords" content="Beauty Salon"/>
 
   <%= favicon_link_tag 'edit_cut_128X128.png' %>
 
@@ -23,8 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!--  <meta name="author" content="">-->
 
 
-  <!--  For the Image gallery -->
-  <%= stylesheet_link_tag "lightbox.css" %>
+
 
 
   <script type="application/x-javascript">
@@ -36,38 +33,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           window.scrollTo(0, 1);
       }
   </script>
-  <!-- //Meta Tags -->
-  <!-- Style Sheets -->
-  <%= stylesheet_link_tag "bootstrap.css" %>
 
   <!-- Bootstrap core CSS for display rendering -->
+  <%= stylesheet_link_tag "bootstrap.css" %>
 
-  <!--// Bootstrap-CSS -->
-  <!--  <link href="css/font-awesome.css" rel="stylesheet">-->
-  <%#= stylesheet_link_tag "font-awesome.css" %>
-
+  <!-- Fontawesome CSS Core -->
   <%= stylesheet_link_tag "font-awesome-4.7.0/css/font-awesome" %>
-
-  <!--// Font-Awesome-CSS -->
-  <%= stylesheet_link_tag "owl.carousel.css" %>
-
-
-  <%= stylesheet_link_tag "flexslider.css" %>
 
   <!-- Font Awesome Animated Icons -->
   <%= stylesheet_link_tag "font-awesome-animation" %>
 
-  <!--// Owl-Carousel-CSS -->
+  <!--// Owl Corousel-CSS -->
+  <%= stylesheet_link_tag "owl.carousel.css" %>
+
+  <!--// Flexslider-CSS -->
+  <%= stylesheet_link_tag "flexslider.css" %>
+
+  <!--// App Custom Style -->
   <%= stylesheet_link_tag "style.css" %>
 
+  <!--  For the Image gallery -->
+  <%= stylesheet_link_tag "lightbox.css" %>
 
-
-
-
-
-
-
-  <!-- //Style Sheets -->
   <!-- web-fonts -->
   <link href="//fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
@@ -82,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
       <div class="header-bottom-agileits">
         <div class="w3-logo">
-          <h1><a href="#">Salón Havana</a></h1>
+          <h1><a href="#">Salón Havanas</a></h1>
         </div>
         <div class="address">
           <p>Altahabana, Boyeros, Habana</p>
@@ -169,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   productos
                   naturales.</p>
                 <div class="botton">
-                  <a href="#">Contáctenos ahora</a>
+                  <a href="<%= contact_path %>">Contáctenos ahora</a>
                 </div>
               </div>
             </li>
@@ -182,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   naturales.
                 </p>
                 <div class="botton">
-                  <a href="#">Contáctenos ahora</a>
+                  <a href="<%= contact_path %>">Contáctenos ahora</a>
                 </div>
               </div>
             </li>
@@ -194,7 +181,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   productos
                   naturales.</p>
                 <div class="botton">
-                  <a href="#">Contáctenos ahora</a>
+                  <a href="<%= contact_path %>">Contáctenos ahora</a>
                 </div>
               </div>
             </li>
@@ -407,16 +394,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //stats -->
 
 <!--js for bootstrap working-->
-<!--<script src="js/bootstrap.js"></script>-->
 <%= javascript_include_tag 'bootstrap.js' %>
-
-
-
-<%#= javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.slim.min.js' %>
-
-<%#= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %>
-
-<%#= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' %>
 
 
 
@@ -424,34 +402,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Application JavaScript Files
 ================================================== -->
-<!--<script src="application.js"></script>-->
 <%#= javascript_include_tag 'application.js' %>
 <%= javascript_include_tag 'app.js' %>
-
-
-
-
-
-
-
-
-<!--  Lightview -->
-<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>-->
-<!--  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>-->
-<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' %>
-
-<!--<script type="text/javascript" src="../js/excanvas/excanvas.js"></script>-->
-<%= javascript_include_tag 'lightview/excanvas/excanvas.js' %>
-<!--  <script type="text/javascript" src="../js/spinners/spinners.min.js"></script>-->
-<%= javascript_include_tag 'lightview/spinners/spinners.min.js' %>
-
-<!--  <script type="text/javascript" src="../js/lightview/lightview.js"></script>-->
-<%= javascript_include_tag 'lightview/lightview/lightview.js' %>
-<!--  <link rel="stylesheet" type="text/css" href="../css/lightview/lightview.css"/>-->
-<%= stylesheet_link_tag "lightview/lightview.css" %>
-
-
-
 
 
 <!-- //for bootstrap working -->

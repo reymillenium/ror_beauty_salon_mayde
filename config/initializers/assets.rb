@@ -68,11 +68,4 @@ Rails.application.config.assets.precompile += %w( lightbox.css )
 Rails.application.config.assets.precompile += %w( font-awesome-4.7.0/css/font-awesome.css )
 Rails.application.config.assets.precompile += %w( font-awesome-animation.css )
 
-# Lightview
-Rails.application.config.assets.precompile += %w( lightview/excanvas/excanvas.js )
-Rails.application.config.assets.precompile += %w( lightview/spinners/spinners.min.js )
-Rails.application.config.assets.precompile += %w( lightview/lightview/lightview.js )
-Rails.application.config.assets.precompile += %w( lightview/lightview.css )
-
-
 
