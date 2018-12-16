@@ -3,7 +3,7 @@
 
 
 <head>
-  <title>Salón La Habanera</title>
+  <title>Salón Havana</title>
 
   <%#= csrf_meta_tags %>
   <%#= csp_meta_tag %>
@@ -15,11 +15,16 @@
   <meta name="keywords" content="Beauty Salon Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design"/>
 
+  <%= favicon_link_tag 'edit_cut_128X128.png' %>
 
   <!--  <meta charset="utf-8">-->
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
   <!--  <meta name="description" content="">-->
   <!--  <meta name="author" content="">-->
+
+
+  <!--  For the Image gallery -->
+  <%= stylesheet_link_tag "lightbox.css" %>
 
 
   <script type="application/x-javascript">
@@ -49,8 +54,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
   <%= stylesheet_link_tag "flexslider.css" %>
 
+  <!-- Font Awesome Animated Icons -->
+  <%= stylesheet_link_tag "font-awesome-animation" %>
+
   <!--// Owl-Carousel-CSS -->
   <%= stylesheet_link_tag "style.css" %>
+
+
+
+
+
+
+
 
   <!-- //Style Sheets -->
   <!-- web-fonts -->
@@ -67,16 +82,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
       <div class="header-bottom-agileits">
         <div class="w3-logo">
-          <h1><a href="#">Salón Habana</a></h1>
+          <h1><a href="#">Salón Havana</a></h1>
         </div>
         <div class="address">
           <p>Altahabana, Boyeros, Habana</p>
-          <p class="para-y"><a href="#">Obtenga más infromación</a></p>
+          <p class="para-y"><a href="#">Obtenga más información</a></p>
         </div>
         <div class="nav-contact-w3ls">
-          <p>+(535) 357-5012<span class="fa fa-phone" aria-hidden="true"></span></p>
-          <p class="para-y">
-            <a href="mailto:maydemillenium@gmail.com">maydemillenium@gmail.com</a><span class="fa fa-envelope-o" aria-hidden="true"></span>
+          <p class="faa-parent animated-hover" style="cursor: pointer;">
+            +(535) 357-5012<span class="fa fa-phone faa-ring fa-fast" aria-hidden="true"></span>
+          </p>
+          <p class="para-y faa-parent animated-hover" style="cursor: pointer;">
+            <a href="mailto:maydemillenium@gmail.com">maydemillenium@gmail.com</a><span class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></span>
           </p>
         </div>
         <div class="clearfix"></div>
@@ -203,18 +220,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <div class="col-md-4 w3layouts_footer_grid">
         <h2>Info. <span>de Contacto</span></h2>
         <ul class="con_inner_text">
-          <li><span class="fa fa-map-marker" aria-hidden="true"></span>Altahabana, Boyeros, Habana
-            <label> New York City.</label></li>
-          <li><span class="fa fa-envelope-o" aria-hidden="true"></span>
-            <a href="mailto:maydemillenium@gmail.com">maydemillenium@gmail.com</a></li>
-          <li><span class="fa fa-phone" aria-hidden="true"></span> (+535) 357-5012</li>
+          <li class="faa-parent animated-hover">
+            <span class="fa fa-map-marker faa-vertical fa-fast" aria-hidden="true"></span>Altahabana, Boyeros, Habana
+            <label> New York City.</label>
+          </li>
+          <li class="faa-parent animated-hover">
+            <span class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></span>
+            <a href="mailto:maydemillenium@gmail.com">maydemillenium@gmail.com</a>
+          </li>
+          <li class="faa-parent animated-hover">
+            <span class="fa fa-phone faa-ring fa-fast" aria-hidden="true"></span> (+535) 357-5012
+          </li>
         </ul>
 
         <ul class="social_agileinfo">
-          <li><a href="#" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
+          <li>
+            <a href="#" class="w3_facebook faa-parent animated-hover"><i class="fa fa-facebook faa-ring faa-fast"></i></a>
+          </li>
+          <li>
+            <a href="#" class="w3_twitter faa-parent animated-hover"><i class="fa fa-twitter faa-ring faa-fast"></i></a>
+          </li>
+          <li>
+            <a href="#" class="w3_instagram faa-parent animated-hover"><i class="fa fa-instagram faa-ring faa-fast"></i></a>
+          </li>
+          <li>
+            <a href="#" class="w3_google faa-parent animated-hover"><i class="fa fa-google-plus faa-ring faa-fast"></i></a>
+          </li>
         </ul>
       </div>
       <div class="col-md-4 w3layouts_footer_grid">
@@ -222,7 +253,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p>Subscribiéndose a nuestra lista de email usted siempre obtendrá las últimas noticias sobre nosotros.</p>
         <form action="#" method="post">
           <input type="email" name="Email" placeholder="Teclee su email..." required="">
-          <button class="btn1"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+          <button class="btn1 faa-parent animated-hover">
+            <i class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></i></button>
           <div class="clearfix"></div>
         </form>
       </div>
@@ -276,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <div class="clearfix"></div>
     </div>
   </div>
-  <p class="copyright">© 2018 Salón Habana. Todos los Derechos Reservados | Diseñado por
+  <p class="copyright">© 2018 Salón Havana. Todos los Derechos Reservados | Diseñado por
     <a href="https://w3layouts.com/" style="text-decoration: none;" target="_blank">Reinier García</a></p>
 </div>
 <!-- //footer -->
@@ -395,6 +427,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--<script src="application.js"></script>-->
 <%#= javascript_include_tag 'application.js' %>
 <%= javascript_include_tag 'app.js' %>
+
+
+
+
+
+
+
+
+<!--  Lightview -->
+<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>-->
+<!--  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>-->
+<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' %>
+
+<!--<script type="text/javascript" src="../js/excanvas/excanvas.js"></script>-->
+<%= javascript_include_tag 'lightview/excanvas/excanvas.js' %>
+<!--  <script type="text/javascript" src="../js/spinners/spinners.min.js"></script>-->
+<%= javascript_include_tag 'lightview/spinners/spinners.min.js' %>
+
+<!--  <script type="text/javascript" src="../js/lightview/lightview.js"></script>-->
+<%= javascript_include_tag 'lightview/lightview/lightview.js' %>
+<!--  <link rel="stylesheet" type="text/css" href="../css/lightview/lightview.css"/>-->
+<%= stylesheet_link_tag "lightview/lightview.css" %>
+
+
 
 
 
