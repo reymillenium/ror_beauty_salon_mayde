@@ -9,7 +9,6 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4>Beauty Salon</h4>
 
-        <!--<img src="images/11.jpg" alt=" " class="img-responsive">-->
         <%= image_tag '11.jpg', alt: '', class: 'img-responsive' %>
 
         <h5>Neque porro quisquam est qui dolorem </h5>
@@ -89,7 +88,7 @@
     <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
       a type specimen book</p>
     <div class="botton">
-      <a href="#">About Us</a>
+      <a href="<%= about_path %>">Acerca de</a>
     </div>
   </div>
 </div>
@@ -107,25 +106,25 @@
     <div class="pricing-grids-info">
       <div class="pricing-grid grid-one">
         <div class="w3ls-top">
-          <h3>Basic</h3>
+          <h3>Básico</h3>
         </div>
         <div class="w3ls-bottom">
           <ul class="count">
-            <li>Hair Extension</li>
-            <li>Makeup Application</li>
+            <li>Extensiones de Pelo</li>
+            <li>Aplicación de Maquillaje</li>
             <li>Facial</li>
-            <li>Nails</li>
-            <li>Styling</li>
+            <li>Uñas</li>
+            <li>Estilo</li>
           </ul>
           <h4> 200<span class="sup">$</span></h4>
           <div class="more">
-            <a href="#">Contact Now</a>
+            <a href="#">Contáctenos'</a>
           </div>
         </div>
       </div>
       <div class="pricing-grid grid-two">
         <div class="w3ls-top">
-          <h3>Classic</h3>
+          <h3>Clásico</h3>
         </div>
         <div class="w3ls-bottom">
           <ul class="count">
@@ -137,13 +136,13 @@
           </ul>
           <h4> 350<span class="sup">$</span></h4>
           <div class="more">
-            <a href="#">Contact Now</a>
+            <a href="#">Contáctenos</a>
           </div>
         </div>
       </div>
       <div class="pricing-grid grid-three">
         <div class="w3ls-top">
-          <h3>Gold</h3>
+          <h3>Oro</h3>
         </div>
         <div class="w3ls-bottom">
           <ul class="count">
@@ -155,13 +154,13 @@
           </ul>
           <h4> 500<span class="sup">$</span></h4>
           <div class="more">
-            <a href="#">Contact Now</a>
+            <a href="#">Contáctenos</a>
           </div>
         </div>
       </div>
       <div class="zb pricing-grid grid-four">
         <div class="w3ls-top">
-          <h3>Platinum</h3>
+          <h3>Platino</h3>
         </div>
         <div class="w3ls-bottom">
           <ul class="count">
@@ -173,7 +172,7 @@
           </ul>
           <h4> 800<span class="sup">$</span></h4>
           <div class="more">
-            <a href="#">Contact Now</a>
+            <a href="#">Contáctenos</a>
           </div>
         </div>
       </div>
@@ -255,7 +254,7 @@
   <div class="container">
     <!-- Owl-Carousel -->
     <div class="wthree_head_section">
-      <h3 class="w3l_header">What <span>People Say</span></h3>
+      <h3 class="w3l_header">Opiniones <span>de Clientes</span></h3>
       <p>
         Disfrute de un tratamiento facial o aromaterapia para una ocasión especial. Nuestros servicios
         de belleza y cuidado de la piel se adaptarán a cada necesidad de belleza.
@@ -267,7 +266,6 @@
           <h4>John Smith</h4>
           <span>Lorem Ipsum</span>
         </div>
-        <!--<img class="lazyOwl" src="images/c1.jpg" alt=""/>-->
         <%= image_tag 'c1.jpg', alt: '', class: 'lazyOwl' %>
         <div class="clearfix"></div>
         <p class="para-w3-agile"><span class="fa fa-quote-left" aria-hidden="true"></span>Duis nulla nulla, faucibus id
@@ -279,7 +277,6 @@
           <h4>Jecy Deoco</h4>
           <span>Lorem Ipsum</span>
         </div>
-        <!--<img class="lazyOwl" src="images/c2.jpg" alt=""/>-->
         <%= image_tag 'c2.jpg', alt: '', class: 'lazyOwl' %>
 
         <div class="clearfix"></div>
@@ -292,7 +289,6 @@
           <h4>Devid Fahim</h4>
           <span>Lorem Ipsum</span>
         </div>
-        <!--<img class="lazyOwl" src="images/c3.jpg" alt=""/>-->
         <%= image_tag 'c3.jpg', alt: '', class: 'lazyOwl' %>
         <div class="clearfix"></div>
         <p class="para-w3-agile"><span class="fa fa-quote-left" aria-hidden="true"></span>Duis nulla nulla, faucibus id
@@ -304,7 +300,6 @@
           <h4>Honey Jisa</h4>
           <span>Lorem Ipsum</span>
         </div>
-        <!--<img class="lazyOwl" src="images/c1.jpg" alt=""/>-->
         <%= image_tag 'c1.jpg', alt: '', class: 'lazyOwl' %>
         <div class="clearfix"></div>
         <p class="para-w3-agile"><span class="fa fa-quote-left" aria-hidden="true"></span>Duis nulla nulla, faucibus id
@@ -316,7 +311,6 @@
           <h4>Jecy Deoco</h4>
           <span>Lorem Ipsum</span>
         </div>
-        <!--<img class="lazyOwl" src="images/c2.jpg" alt=""/>-->
         <%= image_tag 'c2.jpg', alt: '', class: 'lazyOwl' %>
         <div class="clearfix"></div>
         <p class="para-w3-agile"><span class="fa fa-quote-left" aria-hidden="true"></span>Duis nulla nulla, faucibus id
@@ -328,7 +322,6 @@
           <h4>Devid Fahim</h4>
           <span>Lorem Ipsum</span>
         </div>
-        <!--<img class="lazyOwl" src="images/c3.jpg" alt=""/>-->
         <%= image_tag 'c3.jpg' %>
         <div class="clearfix"></div>
         <p class="para-w3-agile"><span class="fa fa-quote-left" aria-hidden="true"></span>Duis nulla nulla, faucibus id

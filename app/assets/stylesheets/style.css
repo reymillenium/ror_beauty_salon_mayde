@@ -3399,3 +3399,24 @@ p.copyright {
     /*max-width: 100%;*/
     /*height: auto;*/
 /*}*/
+
+
+/* Lightbox */
+
+.demonstrations { float: left; clear: both; width: 100%; margin-bottom: 18px; }
+.demonstrations a {
+    float: left;
+    width: 150px;
+    height: 80px;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+}
+.demonstrations a img {
+    float: left;
+    width: 150px;
+    height: 80px;
+}
+.demonstrations .rightmost { margin-right: 0; }
+
+
+

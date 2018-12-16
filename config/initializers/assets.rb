@@ -57,10 +57,15 @@ Rails.application.config.assets.precompile += %w( bootstrap.js )
 Rails.application.config.assets.precompile += %w( style.css )
 
 
-Rails.application.config.assets.precompile += %w( font-awesome-4.7.0/css/font-awesome.css )
+# Custom App Style
 Rails.application.config.assets.precompile += %w( app.js )
 
 # For the pictures gallery
 Rails.application.config.assets.precompile += %w( lightbox-plus-jquery.min.js )
-#
+Rails.application.config.assets.precompile += %w( lightbox.css )
+
+# Fontawesome
+Rails.application.config.assets.precompile += %w( font-awesome-4.7.0/css/font-awesome.css )
+Rails.application.config.assets.precompile += %w( font-awesome-animation.css )
+
 
