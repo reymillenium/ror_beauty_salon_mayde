@@ -110,10 +110,6 @@
               <a class="<%= current_page?(:controller => 'pages', :action => 'index') ? 'active' : '' %>" href="<%= index_path %>">Inicio</a>
             </li>
             <li>
-              <a class="<%= current_page?(:controller => 'pages', :action => 'about') ? 'active' : '' %>" href="<%= about_path %>">Acerca
-                de</a>
-            </li>
-            <li>
               <a class="<%= current_page?(:controller => 'pages', :action => 'services') ? 'active' : '' %>" href="<%= services_path %>">Servicios</a>
             </li>
             <li class="dropdown">
@@ -128,6 +124,10 @@
             </li>
             <li>
               <a class="<%= current_page?(:controller => 'pages', :action => 'contact') ? 'active' : '' %>" href="<%= contact_path %>">Contacto</a>
+            </li>
+            <li>
+              <a class="<%= current_page?(:controller => 'pages', :action => 'about') ? 'active' : '' %>" href="<%= about_path %>">Acerca
+                de</a>
             </li>
           </ul>
 
