@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  # helper PagesHelper::show_banners
+
   # layout "index_layout", :only => [:about, :contact, :gallery, :index, :services]
 
   # Shows the about view

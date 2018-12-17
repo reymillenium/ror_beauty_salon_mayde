@@ -21,9 +21,6 @@
   <!--  <meta name="author" content="">-->
 
 
-
-
-
   <script type="application/x-javascript">
       addEventListener("load", function () {
           setTimeout(hideURLbar, 0);
@@ -64,7 +61,10 @@
 <body>
 <!-- banner -->
 <!--<div class="banner jarallax" id="home">-->
-<div class="<%= current_page?(:controller => 'pages', :action => 'index') ? 'banner' : 'banner-1' %> jarallax" id="home">
+<!--It works!-->
+<!--<div class="<%#= current_page?(:controller => 'pages', :action => 'index') ? 'banner' : 'banner-1' %> jarallax" id="home">-->
+<!--<div class="<%#= current_page?(index_path) ? 'banner' : (current_page?(root_path) ? 'banner' : 'banner-1') %> jarallax" id="home">-->
+<div class="<%= show_banners ? 'banner' : 'banner-1' %> jarallax" id="home">
   <header>
     <div class="container">
       <div class="header-bottom-agileits">
@@ -107,10 +107,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <a class="<%= current_page?(:controller => 'pages', :action => 'index') ? 'active' : '' %>" href="<%= index_path %>">Inicio</a>
+              <!--<a class="<%#= current_page?(:controller => 'pages', :action => 'index') ? 'active' : '' %>" href="<%#= index_path %>">Inicio</a>-->
+              <a class="<%= current_page?(index_path) ? 'active' : '' %>" href="<%= index_path %>">Inicio</a>
             </li>
             <li>
-              <a class="<%= current_page?(:controller => 'pages', :action => 'services') ? 'active' : '' %>" href="<%= services_path %>">Servicios</a>
+              <a class="<%= current_page?(services_path) ? 'active' : '' %>" href="<%= services_path %>">Servicios</a>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Reservaciones<b class="caret"></b></a>
@@ -120,13 +121,13 @@
               </ul>
             </li>
             <li>
-              <a class="<%= current_page?(:controller => 'pages', :action => 'gallery') ? 'active' : '' %>" href="<%= gallery_path %>">Galería</a>
+              <a class="<%= current_page?(gallery_path) ? 'active' : '' %>" href="<%= gallery_path %>">Galería</a>
             </li>
             <li>
-              <a class="<%= current_page?(:controller => 'pages', :action => 'contact') ? 'active' : '' %>" href="<%= contact_path %>">Contacto</a>
+              <a class="<%= current_page?(contact_path) ? 'active' : '' %>" href="<%= contact_path %>">Contacto</a>
             </li>
             <li>
-              <a class="<%= current_page?(:controller => 'pages', :action => 'about') ? 'active' : '' %>" href="<%= about_path %>">Acerca
+              <a class="<%= current_page?(about_path) ? 'active' : '' %>" href="<%= about_path %>">Acerca
                 de</a>
             </li>
           </ul>
@@ -141,7 +142,15 @@
 
   <!-- Renders only if is the index view  -->
   <!-- Only in the index view -->
-  <div class="container" style="<%= !current_page?(index_path) ? 'display: none' : '' %>">
+  <!--  Works, but not in the root route-->
+  <!--  <div class="container" style="<%#= !current_page?(index_path) ? 'display: none' : '' %>">-->
+
+  <!--  It works. But also shows 3 yellow blinking points at the top of the page in the root route and the index route too -->
+  <!--  <div class="container" style="<%#= !current_page?(index_path) ? (!current_page?(root_path) ? 'display: none' : '') : '' %>">-->
+  <!--  It works too. But also shows 3 yellow blinking points at the top of the page in the root route and the index route too -->
+  <!--  <div class="container" style="<%#= current_page?(index_path) ? '' : (current_page?(root_path) ? '' : 'display: none') %>">-->
+
+  <div class="container" style="<%= show_banners ? '' : 'display: none' %>">
     <!-- header -->
     <!-- //header -->
     <div class="agileits_w3layouts_banner_info">
