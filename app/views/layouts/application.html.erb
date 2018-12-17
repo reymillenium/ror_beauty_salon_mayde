@@ -21,9 +21,6 @@
   <!--  <meta name="author" content="">-->
 
 
-
-
-
   <script type="application/x-javascript">
       addEventListener("load", function () {
           setTimeout(hideURLbar, 0);
@@ -64,7 +61,9 @@
 <body>
 <!-- banner -->
 <!--<div class="banner jarallax" id="home">-->
-<div class="<%= current_page?(:controller => 'pages', :action => 'index') ? 'banner' : 'banner-1' %> jarallax" id="home">
+<div class="<%= current_page?(index_path) ? 'banner' : (current_page?(root_path) ? 'banner' : 'banner-1') %> jarallax" id="home">
+  <!--<div class="<%#= current_page?(:controller => 'pages', :action => 'index') ? 'banner' : 'banner-1' %> jarallax" id="home">-->
+  <!--<div class="<%#= PagesHelper.show_banners? ? 'banner' : 'banner-1' %> jarallax" id="home">-->
   <header>
     <div class="container">
       <div class="header-bottom-agileits">
@@ -141,7 +140,13 @@
 
   <!-- Renders only if is the index view  -->
   <!-- Only in the index view -->
-  <div class="container" style="<%= !current_page?(index_path) ? 'display: none' : '' %>">
+  <!--  Works, but not in the root route-->
+  <!--  <div class="container" style="<%#= !current_page?(index_path) ? 'display: none' : '' %>">-->
+
+  <!--  It works. But also shows 3 yellow blinking points at the top of the page in the root route and the index route too -->
+  <!--  <div class="container" style="<%#= !current_page?(index_path) ? (!current_page?(root_path) ? 'display: none' : '') : '' %>">-->
+  <!--  It works too. But also shows 3 yellow blinking points at the top of the page in the root route and the index route too -->
+  <div class="container" style="<%= current_page?(index_path) ? '' : (current_page?(root_path) ? '' : 'display: none') %>">
     <!-- header -->
     <!-- //header -->
     <div class="agileits_w3layouts_banner_info">
