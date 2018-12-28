@@ -52,6 +52,14 @@
   <!--  For the Image gallery -->
   <%= stylesheet_link_tag "lightbox.css" %>
 
+  <!--  For the Alertify plugin. Include the core style -->
+  <%= stylesheet_link_tag "css/alertify.min.css" %>
+
+  <!--  For the Alertify plugin. Include a theme -->
+  <%= stylesheet_link_tag "css/themes/default.min.css" %>
+
+
+
   <!-- web-fonts -->
   <link href="//fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
@@ -410,7 +418,8 @@
 <!--js for bootstrap working-->
 <%= javascript_include_tag 'bootstrap.js' %>
 
-
+<!-- For the Alertify plugin. Include the JavaScript File -->
+<%= javascript_include_tag 'alertify.min.js' %>
 
 
 

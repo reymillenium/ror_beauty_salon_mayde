@@ -16,7 +16,9 @@ class MessageController < ApplicationController
     # If the message is properly saved in the DB...
     if @message.save
       # It redirects to the contact page with a notice message
-      redirect_to contact_path, :notice => "Gracias " + @full_name + ', su mensaje ha sido enviado'
+      redirect_to contact_path, :notice => @full_name
+    else
+      redirect_to contact_path, :notice => 'error_message_jsdfkjh54sghb'
     end
 
   end
