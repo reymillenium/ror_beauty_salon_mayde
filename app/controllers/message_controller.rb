@@ -6,13 +6,18 @@ class MessageController < ApplicationController
   end
 
   def create
+
+    # Receives the parameters using the function
     @message = Message.new message_params
 
-    @message.save
+    # Gets the full_name field
+    @full_name = @message.full_name
 
-  #   Redirecciono hacia
-  redirect_to contact_path
-
+    # If the message is properly saved in the DB...
+    if @message.save
+      # It redirects to the contact page with a notice message
+      redirect_to contact_path, :notice => "Gracias " + @full_name + ', su mensaje ha sido enviado'
+    end
 
   end
 

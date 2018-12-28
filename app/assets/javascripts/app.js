@@ -1,4 +1,3 @@
-
 addEventListener("load", function () {
     setTimeout(hideURLbar, 0);
 }, false);
@@ -44,23 +43,13 @@ jQuery(document).ready(function ($) {
         }, 1000);
     });
 
+    // It shows the notice after a message is stored in the DB
+    if ($('#div_notice').text() != '') {
+
+        alert($('#div_notice').text());
+    }
 
 
-    // Confirmation message before storing a messsage in the DB
-    $("#new_message_form").submit(function() {
-
-        // if ($("input[type='submit']").val() == "text 1") {
-        //
-        //     alert("Please confirm if everything is correct");
-        //     $("input[type='submit']").val("text 2");
-        //     return false;
-        // }
-
-        alert('test');
-
-
-
-    });
 
 
 });
