@@ -36,12 +36,33 @@ $(document).ready(function () {
 });
 
 jQuery(document).ready(function ($) {
+
     $(".scroll").click(function (event) {
         event.preventDefault();
         $('html,body').animate({
             scrollTop: $(this.hash).offset().top
         }, 1000);
     });
+
+
+
+    // Confirmation message before storing a messsage in the DB
+    $("#new_message_form").submit(function() {
+
+        // if ($("input[type='submit']").val() == "text 1") {
+        //
+        //     alert("Please confirm if everything is correct");
+        //     $("input[type='submit']").val("text 2");
+        //     return false;
+        // }
+
+        alert('test');
+
+
+
+    });
+
+
 });
 
 
@@ -62,3 +83,6 @@ $(document).ready(function () {
 });
 
 $('.counter').countUp();
+
+
+

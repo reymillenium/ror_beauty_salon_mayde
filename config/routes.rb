@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get 'index', to: 'pages#index'
   get 'services', to: 'pages#services'
 
+  resources :message
+
 end

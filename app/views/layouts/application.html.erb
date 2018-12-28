@@ -9,16 +9,16 @@
 
 
   <!--   Meta Tags-->
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="keywords" content="Beauty Salon"/>
+  <meta name="description" content="A website for a Beauty Salon ">
+  <meta name="author" content="Reinier Garcia Ramos">
 
   <%= favicon_link_tag 'edit_cut_128X128.png' %>
 
-  <!--  <meta charset="utf-8">-->
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-  <!--  <meta name="description" content="">-->
-  <!--  <meta name="author" content="">-->
 
 
   <script type="application/x-javascript">
@@ -217,8 +217,8 @@
         <h2>Info. <span>de Contacto</span></h2>
         <ul class="con_inner_text">
           <li class="faa-parent animated-hover">
-            <span class="fa fa-map-marker faa-vertical fa-fast" aria-hidden="true"></span>Altahabana, Boyeros, Habana
-            <label> New York City.</label>
+            <span class="fa fa-map-marker faa-vertical fa-fast" aria-hidden="true"></span>Altahabana, Boyeros
+            <label> Habana, Cuba.</label>
           </li>
           <li class="faa-parent animated-hover">
             <span class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></span>
@@ -258,42 +258,47 @@
         <h3>Trabajos <span>Recientes</span></h3>
         <ul class="con_inner_text midimg">
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
+              <%= image_tag 'p1.jpg', alt: "", class: 'img-responsive' %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p2.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p3.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p4.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p5.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p6.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p7.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p8.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p9.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
