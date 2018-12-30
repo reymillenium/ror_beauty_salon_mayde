@@ -76,7 +76,9 @@
       <div class="header-bottom-agileits">
 
         <div class="w3-logo">
-          <h1><a href="#">Salón Havana</a></h1>
+          <h1>
+            <%= link_to 'Salón Havana', root_path %>
+          </h1>
         </div>
 
         <div class="nav-contact-w3ls">
@@ -88,26 +90,41 @@
           </p>
         </div>
 
-        <div class="address">
-          <p>Altahabana, Boyeros, Habana</p>
-          <!--<p class="para-y"><a href="#">Obtenga más información</a></p>-->
-          <p class="para-y">
+        <% if current_user %>
 
-            <% if current_user %>
-              <!-- Not working! -->
-              <%#= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-              <!-- Not working! -->
-              <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-            <% else %>
-              <%= link_to 'Sign up', new_user_registration_path %>
+          <!-- <div class="address">-->
+          <div class="nav-contact-w3ls">
+            <p>
+              <%= 'Hello ' + current_user.email %>
+            </p>
 
-              <%= link_to 'Sign in', new_user_session_path %>
-            <% end %>
+            <p class="para-y">
+              <!-- working! -->
+              <%#= link_to destroy_user_session_path, :method => :delete, class: 'faa-parent animated-hover' do %>
+              <%= link_to destroy_user_session_path, class: 'faa-parent animated-hover', method: :delete do %>
+                Sign out <span class="fa fa-sign-out faa-horizontal fa-fast" aria-hidden="true"></span>
+              <% end %>
+            </p>
+          </div>
 
+        <% else %>
 
-            <!--            <a href="#">Obtenga más información</a>-->
-          </p>
-        </div>
+          <!-- <div class="address">-->
+          <div class="nav-contact-w3ls">
+            <p>
+              <%= link_to new_user_registration_path, class: 'faa-parent animated-hover', style: 'color: white;' do %>
+                Sign up <span class="fa fa-user-plus faa-ring fa-fast" aria-hidden="true"></span>
+              <% end %>
+            </p>
+
+            <p class="para-y">
+              <%= link_to new_user_session_path, class: 'faa-parent animated-hover' do %>
+                Sign in <span class="fa fa-sign-in faa-horizontal fa-fast" aria-hidden="true"></span>
+              <% end %>
+            </p>
+          </div>
+
+        <% end %>
 
         <div class="clearfix"></div>
 
