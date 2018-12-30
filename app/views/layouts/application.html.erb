@@ -70,19 +70,15 @@
 <!-- banner -->
 <!--<div class="banner jarallax" id="home">-->
 <!--It works!-->
-<!--<div class="<%#= current_page?(:controller => 'pages', :action => 'index') ? 'banner' : 'banner-1' %> jarallax" id="home">-->
-<!--<div class="<%#= current_page?(index_path) ? 'banner' : (current_page?(root_path) ? 'banner' : 'banner-1') %> jarallax" id="home">-->
 <div class="<%= show_banners ? 'banner' : 'banner-1' %> jarallax" id="home">
   <header>
     <div class="container">
       <div class="header-bottom-agileits">
+
         <div class="w3-logo">
           <h1><a href="#">Salón Havana</a></h1>
         </div>
-        <div class="address">
-          <p>Altahabana, Boyeros, Habana</p>
-          <p class="para-y"><a href="#">Obtenga más información</a></p>
-        </div>
+
         <div class="nav-contact-w3ls">
           <p class="faa-parent animated-hover" style="cursor: pointer;">
             +(535) 357-5012<span class="fa fa-phone faa-ring fa-fast" aria-hidden="true"></span>
@@ -91,7 +87,30 @@
             <a href="mailto:maydemillenium@gmail.com">maydemillenium@gmail.com</a><span class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></span>
           </p>
         </div>
+
+        <div class="address">
+          <p>Altahabana, Boyeros, Habana</p>
+          <!--<p class="para-y"><a href="#">Obtenga más información</a></p>-->
+          <p class="para-y">
+
+            <% if current_user %>
+              <!-- Not working! -->
+              <%#= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+              <!-- Not working! -->
+              <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to 'Sign up', new_user_registration_path %>
+
+              <%= link_to 'Sign in', new_user_session_path %>
+            <% end %>
+
+
+            <!--            <a href="#">Obtenga más información</a>-->
+          </p>
+        </div>
+
         <div class="clearfix"></div>
+
       </div>
     </div>
   </header>
@@ -213,6 +232,9 @@
 </div>
 <!-- //banner -->
 
+
+
+<%= render 'layouts/alerts' %>
 <%= yield %>
 
 

@@ -115,13 +115,14 @@
 
             <div class="clearfix"></div>
 
-            <%#= f.submit 'Enviar' %>
-            <%= f.submit 'Enviar', id: 'btn_send_message', data: { confirm: 'Are you sure?' } %>
+            <%= f.submit 'Enviar' %>
+            <%#= f.submit 'Enviar', id: 'btn_send_message', data: {confirm: 'Are you sure?'} %>
             <%#= f.submit 'Enviar', data-confirm => "Are you sure?" %>
             <%#= f.submit 'Enviar', data: {confirm: "Seguro que desea enviar el mensaje?"} %>
             <%#= f.submit 'Enviar', :onrelease => "return confirm('Seguro que desea enviar el mensaje?')" %>
 
-            <div id="div_notice" hidden><%= notice %></div>
+            <!-- Now it is on top of yield, in the application layout -->
+            <!--<div id="div_notice" hidden><%#= notice %></div>-->
 
           <% end %>
 

@@ -15,10 +15,12 @@ class MessageController < ApplicationController
 
     # If the message is properly saved in the DB...
     if @message.save
-      # It redirects to the contact page with a notice message
-      redirect_to contact_path, :notice => @full_name
+      # It redirects to the contact page with a notice
+      # redirect_to contact_path, :notice => 'Su mensaje ha sido enviado', :notice_header => 'Gracias ' + @full_name
+      redirect_to contact_path, :notice => 'Gracias ' + @full_name + '. ' + 'Su mensaje ha sido enviado'
     else
-      redirect_to contact_path, :notice => 'error_message_jsdfkjh54sghb'
+      # redirect_to contact_path, :notice => 'Sus mensaje no se pudo enviar', :notice_header => 'Error en el sistema'
+      redirect_to contact_path, :notice => 'Lo sentimos ' + @full_name + '. ' + 'Su mensaje no se pudo enviar' ''
     end
 
   end

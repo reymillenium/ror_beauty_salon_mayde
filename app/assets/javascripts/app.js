@@ -44,13 +44,10 @@ jQuery(document).ready(function ($) {
     });
 
     // It shows a notice after a message is stored in the DB
-    if (($('#div_notice').text() != '') && ($('#div_notice').text() != 'error_message')) {
+    if ($('#div_notice').text() != '') {
 
-        alertify.alert('Muchas gracias ' + $('#div_notice').text(), 'Su mensaje ha sido enviado!');
-
-    } else if ($('#div_notice').text() == 'error_message_jsdfkjh54sghb') {
-
-        alertify.alert('Error en el sistema!', 'Lo sentimos, pero su mensaje no se pudo enviar!');
+        // alertify.alert($('#div_notice_header').text(), $('#div_notice').text());
+        alertify.alert($('#div_notice').text());
 
     }
 
