@@ -1,29 +1,161 @@
-<h2>Sign up</h2>
+<div class="contact">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <div class="container">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="wthree_head_section">
+
+      <h3 class="w3l_header">Sign <span>up</span></h3>
+
+      <div class="gal-btm">
+
+        <div class="map-home">
+
+          <!-- Left side -->
+          <div class="col-md-4 contact-w3ls">
+          </div>
+          <!-- /Left side -->
+
+          <!-- Central area -->
+          <div class="col-md-4 contact-w3ls">
+
+
+            <!-- Form -->
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+
+
+
+              <!-- <div class="field">-->
+              <!-- <%#= f.label :email %><br/>-->
+              <%#= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <!-- </div>-->
+
+              <!-- <div class="field">-->
+              <%#= f.label :password %>
+              <%# if @minimum_password_length %>
+              <!-- <em>(<%#= @minimum_password_length %> characters minimum)</em>-->
+              <!--                <%# end %><br/>-->
+              <%#= f.password_field :password, autocomplete: "new-password" %>
+              <!-- </div>-->
+
+              <!-- <div class="field">-->
+              <!-- <%#= f.label :password_confirmation %><br/>-->
+              <%#= f.password_field :password_confirmation, autocomplete: "new-password" %>
+              <!-- </div>-->
+
+              <!-- <div class="actions">-->
+              <%#= f.submit "Sign up" %>
+              <!-- </div>-->
+
+
+              <!-- Inputs -->
+              <div class="col-md-12 col-sm-12 contact-left agileits-w3layouts">
+
+                <div class="f-control">
+                  <%= f.label :email, class: 'header' do %>
+                    <b>
+                      Email <span>:</span>
+                    </b>
+                  <%- end %>
+                  <%= f.email_field :email, placeholder: 'Email', autofocus: true, autocomplete: "email", :required => true, class: 'email' %>
+                </div>
+
+                <div class="f-control">
+                  <%= f.label :password, class: 'header' do %>
+                    <b>
+                      Contraseña <span>:</span>
+                    </b>
+                    <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> caracteres mínimo)</em>
+                    <% end %>
+                  <%- end %>
+                  <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Contraseña', :required => true %>
+                </div>
+
+                <div class="f-control">
+                  <%= f.label :password_confirmation, class: 'header' do %>
+                    <b>
+                      Repetir contraseña <span>:</span>
+                    </b>
+                  <%- end %>
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Repetir contraseña', :required => true %>
+                </div>
+
+                <!-- <div class="clearfix"></div> -->
+
+              </div>
+              <!-- /Inputs -->
+
+              <div class="clearfix"></div>
+
+              <div class="f-control">
+                <br>
+                <%= f.submit 'Registrar' %>
+              </div>
+
+
+            <% end %>
+            <!-- /Form -->
+
+          </div>
+          <!-- /Central area -->
+
+          <!-- Right side -->
+          <div class="col-md-4 contact-w3ls">
+          </div>
+          <!-- /Right side -->
+
+        </div>
+        <!-- /.map-home -->
+
+      </div>
+      <!-- /.gal-btm -->
+
+    </div>
+    <!-- /.wthree_head_section -->
+
   </div>
+  <!-- /.container -->
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+</div>
+<!-- /.contact -->
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%= render "devise/shared/links" %>

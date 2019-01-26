@@ -1,26 +1,114 @@
-<h2>Log in</h2>
+<div class="contact">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <div class="container">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+    <div class="wthree_head_section">
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <h3 class="w3l_header">Log <span>in</span></h3>
+
+      <div class="gal-btm">
+
+        <div class="map-home">
+
+          <!-- Left side -->
+          <div class="col-md-4 contact-w3ls">
+          </div>
+          <!-- /Left side -->
+
+          <!-- Central area -->
+          <div class="col-md-4 contact-w3ls">
+
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+              <!--  <div class="field">-->
+              <!--    <%#= f.label :email %><br />-->
+              <%#= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <!--  </div>-->
+
+              <!--  <div class="field">-->
+              <!--    <%#= f.label :password %><br />-->
+              <%#= f.password_field :password, autocomplete: "current-password" %>
+              <!--  </div>-->
+
+              <%# if devise_mapping.rememberable? -%>
+              <!--    <div class="field">-->
+              <%#= f.check_box :remember_me %>
+              <%#= f.label :remember_me %>
+              <!--    </div>-->
+              <%# end -%>
+
+              <!--  <div class="actions">-->
+              <%#= f.submit "Log in" %>
+              <!--  </div>-->
+
+              <!-- Inputs -->
+              <div class="col-md-12 col-sm-12 contact-left agileits-w3layouts">
+                <div class="f-control">
+                  <%= f.label :email, class: 'header' do %>
+                    <b>
+                      Email <span>:</span>
+                    </b>
+                  <%- end %>
+                  <%= f.email_field :email, placeholder: 'Email', autofocus: true, :required => true, class: 'email' %>
+                </div>
+
+                <div class="f-control">
+                  <%= f.label :password, class: 'header' do %>
+                    <b>
+                      Contraseña <span>:</span>
+                    </b>
+                  <%- end %>
+                  <%= f.password_field :password, placeholder: 'Contraseña', :required => true %>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <% if devise_mapping.rememberable? -%>
+                  <div class="f-control">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                  </div>
+                <% end -%>
+
+              </div>
+              <!-- /Inputs -->
+
+              <div class="clearfix"></div>
+
+              <div class="f-control">
+                <br>
+                <%= f.submit 'Entrar' %>
+              </div>
+
+            <% end %>
+            <!-- /form -->
+
+          </div>
+          <!-- /Central area -->
+
+          <!-- Right side -->
+          <div class="col-md-4 contact-w3ls">
+          </div>
+          <!-- /Right side -->
+
+        </div>
+        <!-- /.map-home -->
+
+      </div>
+      <!-- /.gal-btm -->
+
     </div>
-  <% end -%>
+    <!-- /.wthree_head_section -->
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
+  <!-- /.container -->
+
+</div>
+<!-- /.contact -->
+
+
+
+
 
 <%= render "devise/shared/links" %>
