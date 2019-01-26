@@ -1,4 +1,3 @@
-
 addEventListener("load", function () {
     setTimeout(hideURLbar, 0);
 }, false);
@@ -36,12 +35,23 @@ $(document).ready(function () {
 });
 
 jQuery(document).ready(function ($) {
+
     $(".scroll").click(function (event) {
         event.preventDefault();
         $('html,body').animate({
             scrollTop: $(this.hash).offset().top
         }, 1000);
     });
+
+    // It shows a notice after a message is stored in the DB
+    if ($('#div_notice').text() != '') {
+
+        // alertify.alert($('#div_notice_header').text(), $('#div_notice').text());
+        alertify.alert($('#div_notice').text());
+
+    }
+
+
 });
 
 
@@ -62,3 +72,6 @@ $(document).ready(function () {
 });
 
 $('.counter').countUp();
+
+
+

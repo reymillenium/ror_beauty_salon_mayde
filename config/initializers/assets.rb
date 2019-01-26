@@ -68,4 +68,13 @@ Rails.application.config.assets.precompile += %w( lightbox.css )
 Rails.application.config.assets.precompile += %w( font-awesome-4.7.0/css/font-awesome.css )
 Rails.application.config.assets.precompile += %w( font-awesome-animation.css )
 
+# Alertify Plugin
+#
+# JavaScript file
+Rails.application.config.assets.precompile += %w( alertify.min.js )
+# Core Style
+Rails.application.config.assets.precompile += %w( css/alertify.min.css )
+# Theme
+Rails.application.config.assets.precompile += %w( css/themes/default.min.css )
+
 

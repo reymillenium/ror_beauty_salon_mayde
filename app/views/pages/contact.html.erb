@@ -32,35 +32,101 @@
           </ul>
         </div>
         <div class="col-md-8 contact-w3ls">
-          <form action="#" method="post">
+
+          <!--          <form action="#" method="post">-->
+          <!--            <div class="col-md-5 col-sm-5 contact-left agileits-w3layouts">-->
+
+          <!--              <div class="f-control">-->
+          <!--                <label class="header">Nombre Completo <span>:</span></label>-->
+          <!--                <input type="text" name="First Name" placeholder="Nombre Completo" required="">-->
+          <!--              </div>-->
+
+          <!--              <div class="f-control">-->
+          <!--                <label class="header">Email <span>:</span></label>-->
+          <!--                <input type="email" class="email" name="Email" placeholder="Email" required="">-->
+          <!--              </div>-->
+
+          <!--              <div class="f-control">-->
+          <!--                <label class="header">Número telefónico <span>:</span></label>-->
+          <!--                <input type="text" name="Number" placeholder="Número telefónico" required="">-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--            <div class="col-md-7 col-sm-7 contact-right agileits-w3layouts">-->
+
+          <!--              <label class="header">Mensaje <span>:</span></label>-->
+          <!--              <textarea name="Message" placeholder="Mensaje" required=""></textarea>-->
+
+
+          <!--            </div>-->
+          <!--            <div class="clearfix"></div>-->
+          <!--            <input type="submit" value="Enviar">-->
+          <!--          </form>-->
+
+
+
+
+
+
+
+
+
+
+          <%#= form_for :message, url: message_path do |f| %>
+          <!--Salva pero no confirma-->
+          <%= form_for :message, :url => {:action => "create", :controller => "message"}, id: 'new_message_form' do |f| %>
+            <!-- Salva pero no confirma-->
+            <%#= form_for :message, :url => {:action => "create", :controller => "message"}, id: 'new_message_form', :onsubmit => "confirm('Desea hacerlo?');return false" do |f| %>
+
+
+
             <div class="col-md-5 col-sm-5 contact-left agileits-w3layouts">
-
               <div class="f-control">
-                <label class="header">Nombre Completo <span>:</span></label>
-                <input type="text" name="First Name" placeholder="Nombre Completo" required="">
+                <%= f.label :full_name, class: 'header' do %>
+                  Nombre Completo <span>:</span>
+                <%- end %>
+
+                <%= f.text_field :full_name, placeholder: 'Nombre Completo', :required => true %>
               </div>
 
               <div class="f-control">
-                <label class="header">Email <span>:</span></label>
-                <input type="email" class="email" name="Email" placeholder="Email" required="">
+                <%= f.label :email, class: 'header' do %>
+                  Email <span>:</span>
+                <%- end %>
+
+                <%= f.email_field :email, placeholder: 'Email', :required => true, class: 'email' %>
               </div>
 
               <div class="f-control">
-                <label class="header">Número telefónico <span>:</span></label>
-                <input type="text" name="Number" placeholder="Número telefónico" required="">
+                <%= f.label :phone, class: 'header' do %>
+                  Número telefónico <span>:</span>
+                <%- end %>
+
+                <%= f.text_field :phone, placeholder: 'Número telefónico', :required => true %>
               </div>
-              <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
             </div>
+
             <div class="col-md-7 col-sm-7 contact-right agileits-w3layouts">
+              <%= f.label :body, class: 'header' do %>
+                Mensaje <span>:</span>
+              <%- end %>
 
-              <label class="header">Mensaje <span>:</span></label>
-              <textarea name="Message" placeholder="Mensaje" required=""></textarea>
-
-
+              <%= f.text_area :body, placeholder: 'Mensaje', :required => true %>
             </div>
+
             <div class="clearfix"></div>
-            <input type="submit" value="Enviar">
-          </form>
+
+            <%= f.submit 'Enviar' %>
+            <%#= f.submit 'Enviar', id: 'btn_send_message', data: {confirm: 'Are you sure?'} %>
+            <%#= f.submit 'Enviar', data-confirm => "Are you sure?" %>
+            <%#= f.submit 'Enviar', data: {confirm: "Seguro que desea enviar el mensaje?"} %>
+            <%#= f.submit 'Enviar', :onrelease => "return confirm('Seguro que desea enviar el mensaje?')" %>
+
+            <!-- Now it is on top of yield, in the application layout -->
+            <!--<div id="div_notice" hidden><%#= notice %></div>-->
+
+          <% end %>
+
+
         </div>
         <div class="clearfix"></div>
       </div>
@@ -70,7 +136,7 @@
 <!-- //contact -->
 <!-- map -->
 <div class="frame">
-<!--  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d96704.53970617482!2d-74.05317380152253!3d40.76165377918555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sNew+York+City+beauty+salon!5e0!3m2!1sen!2sin!4v1512820386082" allowfullscreen></iframe>-->
+  <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d96704.53970617482!2d-74.05317380152253!3d40.76165377918555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sNew+York+City+beauty+salon!5e0!3m2!1sen!2sin!4v1512820386082" allowfullscreen></iframe>-->
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6173.5951788002785!2d-82.39817076472117!3d23.066266066356466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd70855b610a0b%3A0x6796b7c2d849e1e!2sAgromercado+Altahabana!5e0!3m2!1ses-419!2sus!4v1544874848256" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <!-- //map -->

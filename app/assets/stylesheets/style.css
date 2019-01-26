@@ -2330,7 +2330,7 @@ ul.top-links li a i.fa {
 }
 
 /* contact form */
-.contact-w3ls input[type="text"], .contact-w3ls input[type="email"] {
+.contact-w3ls input[type="text"], .contact-w3ls input[type="email"], .contact-w3ls input[type="password"] {
     width: 100%;
     color: #999;
     float: left;

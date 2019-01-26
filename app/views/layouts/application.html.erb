@@ -9,16 +9,16 @@
 
 
   <!--   Meta Tags-->
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="keywords" content="Beauty Salon"/>
+  <meta name="description" content="A website for a Beauty Salon ">
+  <meta name="author" content="Reinier Garcia Ramos">
 
   <%= favicon_link_tag 'edit_cut_128X128.png' %>
 
-  <!--  <meta charset="utf-8">-->
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-  <!--  <meta name="description" content="">-->
-  <!--  <meta name="author" content="">-->
 
 
   <script type="application/x-javascript">
@@ -52,6 +52,14 @@
   <!--  For the Image gallery -->
   <%= stylesheet_link_tag "lightbox.css" %>
 
+  <!--  For the Alertify plugin. Include the core style -->
+  <%= stylesheet_link_tag "css/alertify.min.css" %>
+
+  <!--  For the Alertify plugin. Include a theme -->
+  <%= stylesheet_link_tag "css/themes/default.min.css" %>
+
+
+
   <!-- web-fonts -->
   <link href="//fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
@@ -62,19 +70,17 @@
 <!-- banner -->
 <!--<div class="banner jarallax" id="home">-->
 <!--It works!-->
-<!--<div class="<%#= current_page?(:controller => 'pages', :action => 'index') ? 'banner' : 'banner-1' %> jarallax" id="home">-->
-<!--<div class="<%#= current_page?(index_path) ? 'banner' : (current_page?(root_path) ? 'banner' : 'banner-1') %> jarallax" id="home">-->
 <div class="<%= show_banners ? 'banner' : 'banner-1' %> jarallax" id="home">
   <header>
     <div class="container">
       <div class="header-bottom-agileits">
+
         <div class="w3-logo">
-          <h1><a href="#">Salón Havana</a></h1>
+          <h1>
+            <%= link_to 'Salón Havana', root_path %>
+          </h1>
         </div>
-        <div class="address">
-          <p>Altahabana, Boyeros, Habana</p>
-          <p class="para-y"><a href="#">Obtenga más información</a></p>
-        </div>
+
         <div class="nav-contact-w3ls">
           <p class="faa-parent animated-hover" style="cursor: pointer;">
             +(535) 357-5012<span class="fa fa-phone faa-ring fa-fast" aria-hidden="true"></span>
@@ -83,7 +89,45 @@
             <a href="mailto:maydemillenium@gmail.com">maydemillenium@gmail.com</a><span class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></span>
           </p>
         </div>
+
+        <% if current_user %>
+
+          <!-- <div class="address">-->
+          <div class="nav-contact-w3ls">
+            <p>
+              <%= 'Hello ' + current_user.email %>
+            </p>
+
+            <p class="para-y">
+              <!-- working! -->
+              <%#= link_to destroy_user_session_path, :method => :delete, class: 'faa-parent animated-hover' do %>
+              <%= link_to destroy_user_session_path, class: 'faa-parent animated-hover', method: :delete do %>
+                Sign out <span class="fa fa-sign-out faa-horizontal fa-fast" aria-hidden="true"></span>
+              <% end %>
+            </p>
+          </div>
+
+        <% else %>
+
+          <!-- <div class="address">-->
+          <div class="nav-contact-w3ls">
+            <p>
+              <%= link_to new_user_registration_path, class: 'faa-parent animated-hover', style: 'color: white;' do %>
+                Sign up <span class="fa fa-user-plus faa-ring fa-fast" aria-hidden="true"></span>
+              <% end %>
+            </p>
+
+            <p class="para-y">
+              <%= link_to new_user_session_path, class: 'faa-parent animated-hover' do %>
+                Sign in <span class="fa fa-sign-in faa-horizontal fa-fast" aria-hidden="true"></span>
+              <% end %>
+            </p>
+          </div>
+
+        <% end %>
+
         <div class="clearfix"></div>
+
       </div>
     </div>
   </header>
@@ -205,6 +249,9 @@
 </div>
 <!-- //banner -->
 
+
+
+<%= render 'layouts/alerts' %>
 <%= yield %>
 
 
@@ -217,8 +264,8 @@
         <h2>Info. <span>de Contacto</span></h2>
         <ul class="con_inner_text">
           <li class="faa-parent animated-hover">
-            <span class="fa fa-map-marker faa-vertical fa-fast" aria-hidden="true"></span>Altahabana, Boyeros, Habana
-            <label> New York City.</label>
+            <span class="fa fa-map-marker faa-vertical fa-fast" aria-hidden="true"></span>Altahabana, Boyeros
+            <label> Habana, Cuba.</label>
           </li>
           <li class="faa-parent animated-hover">
             <span class="fa fa-envelope-o faa-ring fa-fast" aria-hidden="true"></span>
@@ -258,42 +305,47 @@
         <h3>Trabajos <span>Recientes</span></h3>
         <ul class="con_inner_text midimg">
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
+              <%= image_tag 'p1.jpg', alt: "", class: 'img-responsive' %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p2.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p3.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p4.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p5.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p6.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p7.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p8.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
           <li>
-            <%= link_to '#' do %>
+            <%= link_to gallery_path do %>
               <%= image_tag 'p9.jpg', alt: "", class: 'img-responsive' %>
             <% end %>
           </li>
@@ -405,7 +457,8 @@
 <!--js for bootstrap working-->
 <%= javascript_include_tag 'bootstrap.js' %>
 
-
+<!-- For the Alertify plugin. Include the JavaScript File -->
+<%= javascript_include_tag 'alertify.min.js' %>
 
 
 
