@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b747a59-ac5b-48bc-a2c0-64592deefc74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ror_beauty_salon_mayde.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ror_beauty_salon_mayde.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +197,7 @@
       <workItem from="1546046064261" duration="592000" />
       <workItem from="1546116371146" duration="29147000" />
       <workItem from="1587775850254" duration="3062000" />
-      <workItem from="1594793750587" duration="7751000" />
+      <workItem from="1594793750587" duration="8150000" />
     </task>
     <servers />
   </component>
@@ -222,6 +217,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1558" y="540" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594809503157">
+      <screen x="-2526" y="23" width="2526" height="1417" />
+    </state>
+    <state x="-1558" y="540" key="#com.intellij.fileTypes.FileTypeChooser/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594809503157" />
     <state width="1720" height="302" key="GridCell.Tab.0.bottom" timestamp="1587789573079">
       <screen x="-2522" y="23" width="2522" height="1417" />
     </state>
@@ -267,14 +266,14 @@
     </state>
     <state x="-1978" y="265" key="SettingsEditor/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594803377000" />
     <state x="412" y="210" key="SettingsEditor/30.23.1762.1097@30.23.1762.1097" timestamp="1587775868368" />
-    <state x="-1581" y="486" width="1064" height="748" key="find.popup" timestamp="1594805400923">
+    <state x="-1581" y="486" width="1064" height="748" key="find.popup" timestamp="1594809227015">
       <screen x="-2526" y="23" width="2526" height="1417" />
     </state>
-    <state x="-1581" y="486" width="1064" height="748" key="find.popup/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594805400923" />
-    <state x="-1617" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1594806162576">
+    <state x="-1581" y="486" width="1064" height="748" key="find.popup/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594809227015" />
+    <state x="-1617" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1594809488571">
       <screen x="-2526" y="23" width="2526" height="1417" />
     </state>
-    <state x="-1617" y="348" width="670" height="676" key="search.everywhere.popup/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594806162576" />
+    <state x="-1617" y="348" width="670" height="676" key="search.everywhere.popup/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594809488571" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ror_beauty_salon_mayde@Development__ror_beauty_salon_mayde.rcov" NAME="Development: ror_beauty_salon_mayde Coverage Results" MODIFIED="1587776079635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ror_beauty_salon_mayde" />
