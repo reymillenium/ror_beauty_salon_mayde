@@ -292,7 +292,7 @@ ul.dropdown-menu.agile_short_dropdown li{
 }
 /*-- //header --*/
 .banner-1{
-    background: url('app/assets/images/22.jpg') no-repeat 0px 0px;
+    background: url('22.jpg') no-repeat 0px 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
