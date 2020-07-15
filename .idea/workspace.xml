@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b747a59-ac5b-48bc-a2c0-64592deefc74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +199,7 @@
       <workItem from="1546046064261" duration="592000" />
       <workItem from="1546116371146" duration="29147000" />
       <workItem from="1587775850254" duration="3062000" />
-      <workItem from="1594793750587" duration="8150000" />
+      <workItem from="1594793750587" duration="10553000" />
     </task>
     <servers />
   </component>
@@ -266,10 +268,10 @@
     </state>
     <state x="-1978" y="265" key="SettingsEditor/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594803377000" />
     <state x="412" y="210" key="SettingsEditor/30.23.1762.1097@30.23.1762.1097" timestamp="1587775868368" />
-    <state x="-1581" y="486" width="1064" height="748" key="find.popup" timestamp="1594809227015">
+    <state x="-1581" y="486" width="1064" height="748" key="find.popup" timestamp="1594811465787">
       <screen x="-2526" y="23" width="2526" height="1417" />
     </state>
-    <state x="-1581" y="486" width="1064" height="748" key="find.popup/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594809227015" />
+    <state x="-1581" y="486" width="1064" height="748" key="find.popup/-2526.23.2526.1417/0.23.1792.1097@-2526.23.2526.1417" timestamp="1594811465787" />
     <state x="-1617" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1594809488571">
       <screen x="-2526" y="23" width="2526" height="1417" />
     </state>
