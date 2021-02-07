@@ -34,7 +34,7 @@ After any change on the code is necessary to execute on the terminal:
 ```
 $ git push heroku
 ```
-- That will update the [production](https://sharp-notes.herokuapp.com/) release.
+- That will update the [production](https://salon-havana.herokuapp.com/) release.
 
 ***
 
